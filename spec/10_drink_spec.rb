@@ -92,12 +92,16 @@ describe Drink do
       # Create an explicit subject, using 'described_class' and your choice of
       # beverage type.
 
+      subject(:my_fanta) { described_class.new("fanta", 16)}
+
       # remove the 'x' before running this test
-      xit 'is your choice of beverage' do
+      it 'is your choice of beverage' do
+        expect(my_fanta.type).to eql("fanta")
       end
 
       # remove the 'x' before running this test
-      xit 'has 16 ounces' do
+      it 'has 16 ounces' do
+        expect(my_fanta.ounces).to eql(16)
       end
     end
   end
@@ -107,8 +111,11 @@ describe Drink do
       # Create an explicit subject, using 'described_class' and your choice of
       # beverage type.
 
+      subject(:milk) { described_class.new("milk", 16)}
+
       # remove the 'x' before running this test
-      xit 'is full' do
+      it 'is full' do
+        expect(milk).to be_full
       end
     end
 
@@ -116,8 +123,10 @@ describe Drink do
       # Create an explicit subject, using 'described_class' and your choice of
       # beverage type. In addition, specify ounces to be any number under 16.
 
+      subject(:wine) { described_class.new("wine", 15)}
       # remove the 'x' before running this test
-      xit 'is not full' do
+      it 'is not full' do
+        expect(wine).not_to be_full
       end
     end
   end
