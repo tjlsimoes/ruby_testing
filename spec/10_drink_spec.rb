@@ -92,7 +92,7 @@ describe Drink do
       # Create an explicit subject, using 'described_class' and your choice of
       # beverage type.
 
-      subject(:my_fanta) { described_class.new("fanta", 16)}
+      subject(:my_fanta) { described_class.new("fanta")}
 
       # remove the 'x' before running this test
       it 'is your choice of beverage' do
