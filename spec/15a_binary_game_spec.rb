@@ -347,7 +347,7 @@ describe BinaryGame do
       end
 
       it 'calls display_turn_order five times' do
-        expect(game_display).to receive(:display_turn_order).with(search_display).exactly(5)
+        expect(game_display).to receive(:display_turn_order).with(search_display).exactly(5).times
         game_display.display_binary_search(search_display)
       end
     end
